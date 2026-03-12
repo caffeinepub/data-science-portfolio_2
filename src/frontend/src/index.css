@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Plus+Jakarta+Sans:wght@300..700&family=JetBrains+Mono:wght@300..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* Light mode - sophisticated slate */
+    --background: 0.97 0.005 240;
+    --foreground: 0.18 0.025 240;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.025 240;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.025 240;
+    --primary: 0.65 0.18 195;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.93 0.01 240;
+    --secondary-foreground: 0.25 0.02 240;
+    --muted: 0.93 0.01 240;
+    --muted-foreground: 0.52 0.02 240;
+    --accent: 0.7 0.15 200;
+    --accent-foreground: 0.98 0 0;
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.88 0.015 240;
+    --input: 0.88 0.015 240;
+    --ring: 0.65 0.18 195;
+    --radius: 0.5rem;
+    --chart-1: 0.65 0.18 195;
+    --chart-2: 0.62 0.16 250;
+    --chart-3: 0.7 0.14 170;
+    --chart-4: 0.72 0.15 280;
+    --chart-5: 0.68 0.18 215;
+    --sidebar: 0.95 0.008 240;
+    --sidebar-foreground: 0.18 0.025 240;
+    --sidebar-primary: 0.65 0.18 195;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.9 0.012 240;
+    --sidebar-accent-foreground: 0.25 0.02 240;
+    --sidebar-border: 0.88 0.015 240;
+    --sidebar-ring: 0.65 0.18 195;
+  }
+
+  .dark {
+    /* Dark mode - deep navy data terminal */
+    --background: 0.13 0.02 245;
+    --foreground: 0.93 0.015 220;
+    --card: 0.16 0.022 245;
+    --card-foreground: 0.93 0.015 220;
+    --popover: 0.16 0.022 245;
+    --popover-foreground: 0.93 0.015 220;
+    --primary: 0.72 0.2 195;
+    --primary-foreground: 0.1 0.015 245;
+    --secondary: 0.2 0.025 245;
+    --secondary-foreground: 0.85 0.015 220;
+    --muted: 0.2 0.025 245;
+    --muted-foreground: 0.55 0.02 230;
+    --accent: 0.68 0.17 200;
+    --accent-foreground: 0.1 0.015 245;
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.24 0.03 245;
+    --input: 0.24 0.03 245;
+    --ring: 0.72 0.2 195;
+    --chart-1: 0.72 0.2 195;
+    --chart-2: 0.65 0.18 250;
+    --chart-3: 0.72 0.16 170;
+    --chart-4: 0.7 0.17 280;
+    --chart-5: 0.68 0.2 215;
+    --sidebar: 0.15 0.022 245;
+    --sidebar-foreground: 0.93 0.015 220;
+    --sidebar-primary: 0.72 0.2 195;
+    --sidebar-primary-foreground: 0.1 0.015 245;
+    --sidebar-accent: 0.2 0.025 245;
+    --sidebar-accent-foreground: 0.85 0.015 220;
+    --sidebar-border: 0.24 0.03 245;
+    --sidebar-ring: 0.72 0.2 195;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.72 0.2 195),
+      oklch(0.65 0.18 250),
+      oklch(0.72 0.16 170)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-border {
+    box-shadow: inset 0 0 0 1px oklch(0.72 0.2 195 / 0.3);
+  }
+
+  .mesh-gradient {
+    background: radial-gradient(
+        ellipse at 20% 50%,
+        oklch(0.65 0.2 195 / 0.12) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse at 80% 20%,
+        oklch(0.62 0.18 250 / 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 60% 80%,
+        oklch(0.7 0.16 170 / 0.08) 0%,
+        transparent 50%
+      );
+  }
+
+  .hero-mesh {
+    background: radial-gradient(
+        ellipse 80% 50% at 20% 40%,
+        oklch(0.55 0.22 195 / 0.18) 0%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 60% 60% at 80% 60%,
+        oklch(0.5 0.2 250 / 0.14) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 50% 70% at 50% 100%,
+        oklch(0.48 0.18 280 / 0.1) 0%,
+        transparent 50%
+      );
+  }
+
+  .grid-dot {
+    background-image: radial-gradient(
+      oklch(0.72 0.2 195 / 0.15) 1px,
+      transparent 1px
+    );
+    background-size: 30px 30px;
+  }
+
+  .skill-bar {
+    background: linear-gradient(
+      90deg,
+      oklch(0.72 0.2 195),
+      oklch(0.65 0.18 250)
+    );
+  }
+}
+
+/* Animations */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink::after {
+  content: "|";
+  animation: blink 1s step-end infinite;
+  color: oklch(0.72 0.2 195);
+}
