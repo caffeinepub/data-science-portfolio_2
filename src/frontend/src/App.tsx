@@ -150,7 +150,7 @@ function Nav({
             <Code2 className="w-4 h-4 text-primary" />
           </div>
           <span className="font-display font-bold text-lg tracking-tight">
-            Alex<span className="text-primary">.chen</span>
+            Karan<span className="text-primary">.joshi</span>
           </span>
         </button>
 
@@ -269,8 +269,8 @@ function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-display text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight mb-4 leading-none"
         >
-          <span className="text-foreground">Alex </span>
-          <span className="text-gradient">Chen</span>
+          <span className="text-foreground">Karan </span>
+          <span className="text-gradient">Joshi</span>
         </motion.h1>
 
         {/* Title */}
@@ -280,7 +280,7 @@ function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="font-mono text-xl sm:text-2xl text-primary mb-4 cursor-blink"
         >
-          Data Science Student & ML Enthusiast
+          B.Tech CSE Student & Data Science Enthusiast
         </motion.p>
 
         {/* Bio snippet */}
@@ -290,8 +290,9 @@ function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Turning raw data into meaningful insights. MS in Data Science @
-          Stanford, focused on machine learning and NLP.
+          Turning raw data into meaningful insights. 3rd-year B.Tech CSE student
+          passionate about data analysis, machine learning, and data-driven
+          decision making.
         </motion.p>
 
         {/* CTAs */}
@@ -390,7 +391,7 @@ function About() {
               <div className="relative w-full h-full rounded-2xl overflow-hidden border border-primary/20 glow-border">
                 <img
                   src="/assets/generated/alex-chen-profile.dim_400x400.jpg"
-                  alt="Alex Chen"
+                  alt="Karan Joshi"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -415,21 +416,21 @@ function About() {
             transition={{ duration: 0.7 }}
           >
             <h2 className="font-display text-4xl font-bold mb-6">
-              Hi, I'm <span className="text-gradient">Alex</span> 👋
+              Hi, I'm <span className="text-gradient">Karan</span> 👋
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg mb-8">
               {profile?.bio ??
-                "Passionate about turning raw data into meaningful insights. Currently pursuing my MS in Data Science, with a focus on machine learning and NLP. I love building projects that solve real-world problems."}
+                "I am a 3rd-year B.Tech Computer Science and Engineering student with a strong interest in the Data Science domain. I enjoy working with data to uncover insights, build analytical models, and solve real-world problems using technology. My goal is to build innovative solutions that leverage data to create real impact."}
             </p>
 
             <div className="flex flex-wrap gap-3">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary" />
-                San Francisco, CA
+                India
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <GraduationCap className="w-4 h-4 text-primary" />
-                Stanford University
+                B.Tech CSE, 3rd Year
               </div>
             </div>
 
@@ -438,7 +439,7 @@ function About() {
                 { v: "4+", l: "Projects" },
                 { v: "16+", l: "Skills" },
                 { v: "2", l: "Degrees" },
-                { v: "3.92", l: "GPA" },
+                { v: "3rd", l: "Year" },
               ].map((s) => (
                 <div
                   key={s.l}
@@ -765,26 +766,26 @@ function Contact() {
   const links = [
     {
       ocid: "contact.github.link",
-      href: profile?.github ?? "https://github.com/alexchen",
+      href: profile?.github ?? "https://github.com/karanjoshi",
       icon: <Github className="w-6 h-6" />,
       label: "GitHub",
-      handle: "@alexchen",
+      handle: "@karanjoshi",
       desc: "Check out my repositories",
     },
     {
       ocid: "contact.linkedin.link",
-      href: profile?.linkedin ?? "https://linkedin.com/in/alexchen",
+      href: profile?.linkedin ?? "https://linkedin.com/in/karanjoshi",
       icon: <Linkedin className="w-6 h-6" />,
       label: "LinkedIn",
-      handle: "in/alexchen",
+      handle: "in/karanjoshi",
       desc: "Connect professionally",
     },
     {
       ocid: "contact.email.link",
-      href: `mailto:${profile?.email ?? "alex.chen@datasci.edu"}`,
+      href: `mailto:${profile?.email ?? "karan.joshi@datasci.edu"}`,
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
-      handle: profile?.email ?? "alex.chen@datasci.edu",
+      handle: profile?.email ?? "karan.joshi@datasci.edu",
       desc: "Send me a message",
     },
   ];
@@ -857,7 +858,9 @@ function Footer() {
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
         <div className="flex items-center gap-2">
           <Code2 className="w-4 h-4 text-primary" />
-          <span className="font-mono">Alex Chen — Data Science Portfolio</span>
+          <span className="font-mono">
+            Karan Joshi — Data Science Portfolio
+          </span>
         </div>
         <div>
           © {year}. Built with ❤️ using{" "}
