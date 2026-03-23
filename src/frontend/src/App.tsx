@@ -331,9 +331,9 @@ function Hero() {
           className="mt-16 flex flex-wrap items-center justify-center gap-8"
         >
           {[
-            { value: "4+", label: "Projects" },
+            { value: "4", label: "Projects" },
             { value: "16+", label: "Skills" },
-            { value: "2", label: "Degrees" },
+            { value: "1", label: "Degrees" },
             { value: "92%", label: "Best Accuracy" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
@@ -390,7 +390,7 @@ function About() {
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/30 via-chart-2/20 to-transparent blur-xl" />
               <div className="relative w-full h-full rounded-2xl overflow-hidden border border-primary/20 glow-border">
                 <img
-                  src="/assets/generated/alex-chen-profile.dim_400x400.jpg"
+                  src="/assets/uploads/cv-image-1.jpg"
                   alt="Karan Joshi"
                   className="w-full h-full object-cover"
                 />
@@ -438,7 +438,7 @@ function About() {
               {[
                 { v: "4+", l: "Projects" },
                 { v: "16+", l: "Skills" },
-                { v: "2", l: "Degrees" },
+                { v: "1", l: "Degrees" },
                 { v: "3rd", l: "Year" },
               ].map((s) => (
                 <div
@@ -469,6 +469,8 @@ const CATEGORY_COLORS: Record<string, string> = {
   "Machine Learning": "bg-chart-2/15 text-chart-2 border-chart-2/30",
   "Data Visualization": "bg-chart-3/15 text-chart-3 border-chart-3/30",
   Regression: "bg-chart-4/15 text-chart-4 border-chart-4/30",
+  Algorithms: "bg-chart-5/15 text-chart-5 border-chart-5/30",
+  Systems: "bg-orange-500/15 text-orange-400 border-orange-500/30",
 };
 
 function Projects() {
@@ -761,31 +763,29 @@ function Education() {
 // Contact
 // ──────────────────────────────────────────────
 function Contact() {
-  const { data: profile } = useProfile();
-
   const links = [
     {
       ocid: "contact.github.link",
-      href: profile?.github ?? "https://github.com/karanjoshi",
+      href: "https://github.com/karanjoshii",
       icon: <Github className="w-6 h-6" />,
       label: "GitHub",
-      handle: "@karanjoshi",
+      handle: "@karanjoshii",
       desc: "Check out my repositories",
     },
     {
       ocid: "contact.linkedin.link",
-      href: profile?.linkedin ?? "https://linkedin.com/in/karanjoshi",
+      href: "https://in.linkedin.com/in/karan-joshi-7a97832a1",
       icon: <Linkedin className="w-6 h-6" />,
       label: "LinkedIn",
-      handle: "in/karanjoshi",
+      handle: "karan-joshi",
       desc: "Connect professionally",
     },
     {
       ocid: "contact.email.link",
-      href: `mailto:${profile?.email ?? "karan.joshi@datasci.edu"}`,
+      href: "mailto:karanjoshikj1997@gmail.com",
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
-      handle: profile?.email ?? "karan.joshi@datasci.edu",
+      handle: "karanjoshikj1997@gmail.com",
       desc: "Send me a message",
     },
   ];
